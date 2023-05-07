@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Registration open!</title>
+    </head>
+    <body>
+        <form action="/register" method="POST">
+            Login: <input name="login"></input><br>
+            Passw: <input name="password" type="password"></input><br>
+            <button>Register!</button><br>
+        </form>
+        Users registered:
+        <hr />
+        <div>
+            {{users|safe}}
+        </div>
+    </body>
+</html>
