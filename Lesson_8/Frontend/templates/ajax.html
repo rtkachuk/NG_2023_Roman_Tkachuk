@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Time!</title>
+    </head>
+    <body>
+        <div id="time"></div>
+    </body>
+    <script>
+        function getTime() {
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function() {
+                document.getElementById("time").innerHTML = this.responseText;
+            }
+            xhttp.open("GET", "http://127.0.0.1:8083/gettime", true)
+            xhttp.send()
+        }
+        window.setInterval(() => {
+            getTime();
+        }, 1000);
+    </script>
+</html>
